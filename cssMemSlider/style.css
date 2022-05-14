@@ -37,6 +37,7 @@ input {
     align-items: center;
     width: 400%;
     height: inherit;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider-images img {
@@ -59,6 +60,7 @@ input {
 .slider-description {
     display: flex;
     width: 400%;
+    transition: transform 0.5s ease-in-out;
 }
 .slider-description-item {
     width: 25%;
@@ -89,4 +91,28 @@ label:hover .slider-button {
     height: 1rem;
     border-radius: 50%;
     background-color: black;
+}
+
+#button2:checked ~ .slider-images-wrapper .slider-images {
+    transform: translateX(-25%);
+}
+
+#button3:checked ~ .slider-images-wrapper .slider-images {
+    transform: translateX(-50%);
+}
+
+#button4:checked ~ .slider-images-wrapper .slider-images {
+    transform: translateX(-75%);
+}
+
+#button2:checked ~ .slider-bottom .slider-description-wrapper .slider-description {
+    transform: translateX(-25%);
+}
+
+#button3:checked ~ .slider-bottom .slider-description-wrapper .slider-description {
+    transform: translateX(-50%);
+}
+
+#button4:checked ~ .slider-bottom .slider-description-wrapper .slider-description {
+    transform: translateX(-75%);
 }
