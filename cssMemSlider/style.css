@@ -40,7 +40,7 @@ input {
     transition: transform 0.5s ease-in-out;
 }
 
-.slider-images img {
+img {
     max-width: 30rem;
     width: 100%;
 }
@@ -129,26 +129,43 @@ label:hover .slider-button {
     transform: translateX(-80%);
 }
 
-#button1:checked ~ .slider-bottom > .slider-buttons > label:nth-of-type(1) > .slider-button,
-#button2:checked ~ .slider-bottom > .slider-buttons > label:nth-of-type(2) > .slider-button,
-#button3:checked ~ .slider-bottom > .slider-buttons > label:nth-of-type(3) > .slider-button,
-#button4:checked ~ .slider-bottom > .slider-buttons > label:nth-of-type(4) > .slider-button,
-#button5:checked ~ .slider-bottom > .slider-buttons > label:nth-of-type(5) > .slider-button{
+#button1:checked ~ .slider-bottom .slider-buttons label:nth-of-type(1) .slider-button,
+#button2:checked ~ .slider-bottom .slider-buttons label:nth-of-type(2) .slider-button,
+#button3:checked ~ .slider-bottom .slider-buttons label:nth-of-type(3) .slider-button,
+#button4:checked ~ .slider-bottom .slider-buttons label:nth-of-type(4) .slider-button,
+#button5:checked ~ .slider-bottom .slider-buttons label:nth-of-type(5) .slider-button{
     background-color: #A3E547FF;
     border: 0.2rem solid black;
 }
-#button1:checked:hover ~ .slider-bottom > .slider-buttons > label:nth-of-type(1) > .slider-button,
-#button2:checked:hover ~ .slider-bottom > .slider-buttons > label:nth-of-type(2) > .slider-button,
-#button3:checked:hover ~ .slider-bottom > .slider-buttons > label:nth-of-type(3) > .slider-button,
-#button4:checked:hover ~ .slider-bottom > .slider-buttons > label:nth-of-type(4) > .slider-button,
-#button5:checked:hover ~ .slider-bottom > .slider-buttons > label:nth-of-type(5) > .slider-button{
+#button1:checked:hover ~ .slider-bottom .slider-buttons label:nth-of-type(1) .slider-button,
+#button2:checked:hover ~ .slider-bottom .slider-buttons label:nth-of-type(2) .slider-button,
+#button3:checked:hover ~ .slider-bottom .slider-buttons label:nth-of-type(3) .slider-button,
+#button4:checked:hover ~ .slider-bottom .slider-buttons label:nth-of-type(4) .slider-button,
+#button5:checked:hover ~ .slider-bottom .slider-buttons label:nth-of-type(5) .slider-button{
     border-color: gray
 }
 
-#button1:active ~ .slider-bottom > .slider-buttons > label:nth-of-type(1) > .slider-button,
-#button2:active ~ .slider-bottom > .slider-buttons > label:nth-of-type(2) > .slider-button,
-#button3:active ~ .slider-bottom > .slider-buttons > label:nth-of-type(3) > .slider-button,
-#button4:active ~ .slider-bottom > .slider-buttons > label:nth-of-type(4) > .slider-button,
-#button5:active ~ .slider-bottom > .slider-buttons > label:nth-of-type(5) > .slider-button{
+#button1:active ~ .slider-bottom .slider-buttons label:nth-of-type(1) .slider-button,
+#button2:active ~ .slider-bottom .slider-buttons label:nth-of-type(2) .slider-button,
+#button3:active ~ .slider-bottom .slider-buttons label:nth-of-type(3) .slider-button,
+#button4:active ~ .slider-bottom .slider-buttons label:nth-of-type(4) .slider-button,
+#button5:active ~ .slider-bottom .slider-buttons label:nth-of-type(5) .slider-button{
     background-color: brown;
+}
+
+@media (max-width: 25rem) {
+    .slider-images-wrapper {
+        max-width: 15rem;
+    }
+
+    img {
+        max-width: 15rem;
+        width: 100%;
+    }
+
+    .slider-bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 1rem;
+    }
 }
