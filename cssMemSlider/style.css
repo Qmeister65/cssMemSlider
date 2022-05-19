@@ -28,7 +28,7 @@ input {
 
 .slider-images-wrapper {
     overflow: hidden;
-    max-width: 30rem;
+    max-width: 25rem;
     width: 100%;
 }
 
@@ -41,14 +41,14 @@ input {
 }
 
 img {
-    max-width: 30rem;
+    max-width: 25rem;
     width: 100%;
 }
 
 .slider-bottom {
     display: flex;
     justify-content: space-between;
-    max-width: 30rem;
+    max-width: 25rem;
     width: 100%;
 }
 
